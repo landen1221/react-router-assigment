@@ -10,18 +10,18 @@ function App() {
   const [temp, setTemp] = useState(0)
 
   const updateColors = (color) => {
-    setColorList(colorList.push(color))
+    setColorList([color, ...colorList])
     console.log(colorList)
   }
 
   useEffect(() => {
     const body = document.querySelector("body");
     body.style.backgroundColor = "white";
-  }, [temp]);
+  }, [temp, colorList]);
 
-  useEffect(() => {
-    localStorage.setItem("colorList", JSON.stringify(colorList))
-  }, [colorList]);
+  // useEffect(() => {
+  //   localStorage.setItem("colorList", JSON.stringify(colorList))
+  // }, [colorList]);
 
   return (
     <div className="App">

@@ -14,7 +14,7 @@ const SingleColor = ({setTemp}) => {
     <div>
       <h1>This is what {name} looks like</h1>
       <Link to="/colors">
-        <button onClick={() => setTemp(1)}>Home</button>
+        <button onClick={() => setTemp(1+1)}>Home</button>
       </Link>
     </div>
   );
